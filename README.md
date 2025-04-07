@@ -1,6 +1,12 @@
 # Kubernetes-RBAC-based-Multi-Environment-Deployment-using-Kustomize
 
-✅ Project Name: k8s-rbac-deploy-kustomize
+🧱 Step-by-Step Breakdown
+🔹 Step 1: Create the folder structure
+Run the following commands:
+mkdir -p k8s-rbac-deploy-kustomize/{base,overlays/dev,overlays/prod}
+cd k8s-rbac-deploy-kustomize
+
+✅ Project Name: Kubernetes-RBAC-based-Multi-Environment-Deployment-using-Kustomize
 🗂 Folder Structure:
 k8s-rbac-deploy-kustomize/
 ├── base/
@@ -27,3 +33,12 @@ kubectl apply -k overlays/dev/
 
 # Deploy to prod
 kubectl apply -k overlays/prod/
+
+✅ Step
+Check resources created:
+kubectl get all -n dev
+kubectl get sa,role,rolebinding -n dev
+
+kubectl get all -n prod
+kubectl get sa,role,rolebinding -n prod
+
